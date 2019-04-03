@@ -36,6 +36,7 @@ public class messageController {
             return 0;
         }
         System.out.println(response);
+        System.out.println("hello world");
         return 1;
     }
 }

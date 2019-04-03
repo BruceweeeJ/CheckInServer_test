@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fzu</groupId>
-	<artifactId>CheckInServer</artifactId>
+	<artifactId>CheckInServer_test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>  
 	<name>CheckInServer</name>
@@ -103,7 +103,6 @@
 					<verbose>true</verbose>
 				</configuration>
 			</plugin>
-
 
 		</plugins>
 	</build>
