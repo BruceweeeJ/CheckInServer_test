@@ -39,4 +39,9 @@ public class messageController {
         System.out.println("hello world");
         return 1;
     }
+
+    @RequestMapping("/")
+    public String index() {
+        return "index.jsp";
+    }
 }
