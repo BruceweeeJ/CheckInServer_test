@@ -28,7 +28,7 @@ public class test {
 
     @RequestMapping("show")
     public String show() {
-        return "Hello World";
+        return "Hello Me";
     }
 
     @Resource
