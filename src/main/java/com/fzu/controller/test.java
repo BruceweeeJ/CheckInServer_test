@@ -26,6 +26,11 @@ public class test {
         return userServiceImpl.selectAll();
     }
 
+    @RequestMapping("show")
+    public String show() {
+        return "Hello World";
+    }
+
     @Resource
     private accountService accountServiceImpl;
     @RequestMapping("addAccount")
