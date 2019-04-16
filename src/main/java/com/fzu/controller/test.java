@@ -4,8 +4,6 @@ import com.fzu.bean.account;
 import com.fzu.bean.user;
 import com.fzu.service.accountService;
 import com.fzu.service.userService;
-import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
