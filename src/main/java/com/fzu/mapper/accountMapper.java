@@ -25,4 +25,6 @@ public interface accountMapper {
     int updateByPrimaryKey(account record);
 
     account login(account record);
+
+    int getCount();
 }

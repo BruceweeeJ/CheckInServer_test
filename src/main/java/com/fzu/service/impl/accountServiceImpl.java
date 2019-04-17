@@ -20,4 +20,9 @@ public class accountServiceImpl implements accountService {
     public account login(account account) {
         return accountMapper.login(account);
     }
+
+    @Override
+    public int getCount() {
+        return accountMapper.getCount();
+    }
 }

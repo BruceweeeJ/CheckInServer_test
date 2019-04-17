@@ -48,4 +48,9 @@ public class test {
         System.out.println(accountServiceImpl.login(account));
         return 1;
     }
+
+    @RequestMapping("getCount")
+    public int getCount() {
+        return accountServiceImpl.getCount();
+    }
 }
