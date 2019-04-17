@@ -28,6 +28,10 @@
     select * from account where account_number=#{accountNumber,jdbcType=VARCHAR} and login_password=#{loginPassword,jdbcType=VARCHAR}
   </select>
 
+  <select id="getCount" resultType="java.lang.Integer">
+    select count(*) from account
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
 
     delete from account
