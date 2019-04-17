@@ -10,7 +10,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import java.rmi.server.ExportException;
+
 import static org.junit.Assert.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -20,12 +24,21 @@ public class testClassTest {
     private MockMvc mvc;
     @Test
     public void selectAll() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/selectAll"))
-                .andExpect(MockMvcResultMatchers.status().isOk());
+        String response  =  mvc.perform(MockMvcRequestBuilders.get("/selectAll"))
+                .andExpect(MockMvcResultMatchers.status().isOk())//返回的状态是200
+        .andDo(print())//打印出请求和相应的内容
+        .andReturn().getResponse().getContentAsString();   //将相应的数据转换为字符串 ;
+        System.out.println(response);
+
     }
 
     @Test
-    public void show() {
+    public void show() throws Exception{
+        String response  =  mvc.perform(MockMvcRequestBuilders.get("/show"))
+                .andExpect(MockMvcResultMatchers.status().isOk())//返回的状态是200
+                .andDo(print())//打印出请求和相应的内容
+                .andReturn().getResponse().getContentAsString();   //将相应的数据转换为字符串 ;
+        System.out.println(response);
     }
 
     @Test
@@ -34,5 +47,14 @@ public class testClassTest {
 
     @Test
     public void login() {
+    }
+
+    @Test
+    public void getCount() throws Exception{
+        String response  =  mvc.perform(MockMvcRequestBuilders.get("/getCount"))
+                .andExpect(MockMvcResultMatchers.status().isOk())//返回的状态是200
+                .andDo(print())//打印出请求和相应的内容
+                .andReturn().getResponse().getContentAsString();   //将相应的数据转换为字符串 ;
+        System.out.println(response);
     }
 }
